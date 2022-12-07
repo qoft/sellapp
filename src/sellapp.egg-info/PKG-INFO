@@ -1,9 +1,9 @@
 Metadata-Version: 2.1
 Name: sellapp
-Version: 1.0.1
+Version: 1.0.2
 Summary: Python SDK for sell.app
 Project-URL: Homepage, https://github.com/qoft/sellapp.py
-Keywords: feed,reader,tutorial
+Keywords: sell.app,sellapp
 Requires-Python: >=3.7
 Description-Content-Type: text/markdown
 

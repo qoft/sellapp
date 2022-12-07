@@ -7,10 +7,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sellapp"
-version = "1.0.1"
+version = "1.0.2"
 description = "Python SDK for sell.app"
 readme = "README.md"
-keywords = ["feed", "reader", "tutorial"]
+keywords = ["sell.app", "sellapp"]
 dependencies = [
     "httpx",
 ]
