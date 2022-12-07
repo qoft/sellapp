@@ -1,3 +1,7 @@
-import sellapp
+from src.sellapp import Api
 
-api = sellapp.New("API KEY")
+api = Api("API KEY")
+
+# Get all products
+products = api.get_all_products()
+print(products)
