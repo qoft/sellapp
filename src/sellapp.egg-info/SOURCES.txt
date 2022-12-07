@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/sellapp/__init__.py
+src/sellapp/sellapp.py
+src/sellapp.egg-info/PKG-INFO
+src/sellapp.egg-info/SOURCES.txt
+src/sellapp.egg-info/dependency_links.txt
+src/sellapp.egg-info/requires.txt
+src/sellapp.egg-info/top_level.txt
