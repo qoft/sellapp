@@ -1,18 +1,18 @@
 
 # sellapp
 
-A Python SDK made for [sell.app](https://sell.app) 
-
+A Python SDK made for [sell.app](https://sell.app)
 
 ## Installation
 
 ```bash
   pip install sellapp
 ```
-    
+
 ## Usage
 
 ### Basic usage
+
 ```python
 import sellapp
 
