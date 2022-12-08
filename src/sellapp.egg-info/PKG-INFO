@@ -2,26 +2,25 @@ Metadata-Version: 2.1
 Name: sellapp
 Version: 1.0.2
 Summary: Python SDK for sell.app
-Project-URL: Homepage, https://github.com/qoft/sellapp.py
+Project-URL: Homepage, <https://github.com/qoft/sellapp.py>
 Keywords: sell.app,sellapp
 Requires-Python: >=3.7
 Description-Content-Type: text/markdown
 
-
 # sellapp
 
-A Python SDK made for [sell.app](https://sell.app) 
-
+A Python SDK made for [sell.app](https://sell.app)
 
 ## Installation
 
 ```bash
   pip install sellapp
 ```
-    
+
 ## Usage
 
 ### Basic usage
+
 ```python
 import sellapp
 
