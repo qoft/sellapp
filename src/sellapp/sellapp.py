@@ -79,11 +79,11 @@ class Api:
         if blacklist_type not in ["EMAIL", "IP", "COUNTRY"]:
             raise ValueError("Blacklist type is not \"EMAIL\", \"IP\", or \"COUNTRY\"")
         post_data = {
-			"type": blacklist_type,
-			"data": data,
-			"description": description
-		}
-        return self.do_request(params=f"blacklists", json=post_data, method="POST").json()
+        	"type": blacklist_type,
+        	"data": data,
+        	"description": description
+        }
+        return self.do_request(params="blacklists", json=post_data, method="POST").json()
 
     def update_blacklist(self, id: str, blacklist_type: str, data: str, description: str) -> dict:
         blacklist_type = blacklist_type.upper()
