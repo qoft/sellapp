@@ -53,7 +53,7 @@ class Api:
 
         :return: All blacklists
         """
-        return self.do_request(params=f"blacklists").json()
+        return self.do_request(params="blacklists").json()
 
     def get_blacklist(self, id: str) -> dict:
         """
