@@ -205,14 +205,14 @@ class Api:
         :return: All products in descending order
         """
         post_data = {
-			"sort": [
-				{
-					field: field,
-					"direction": "desc", 
-				}
-			]
-		}
-        return self.do_request(params=f"invoices/search", json=post_data).json()
+        	"sort": [
+        		{
+        			field: field,
+        			"direction": "desc", 
+        		}
+        	]
+        }
+        return self.do_request(params="invoices/search", json=post_data).json()
 
     def get_product(self, id: str) -> dict:
         """
