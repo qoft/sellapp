@@ -401,7 +401,7 @@ class Api:
                 "products": products
             }, method="POST").json()
     
-    def issue_replacement(self, id: int, listings: list = []) -> dict:
+    def issue_replacement(self, id: int, listings: list = None) -> dict:
         """
         Issue a replacement
 
@@ -411,6 +411,8 @@ class Api:
         :return: The replaced invoice
         """
 
+        if listings is None:
+            listings = []
         return self.do_request(params=f"invoices/{id}/issue-replacement", json={"listings": listings}, method="PATCH").json()
 
     def create_payment(self, id: int) -> dict:
