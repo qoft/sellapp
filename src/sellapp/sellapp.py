@@ -3,12 +3,15 @@ import httpx
 # referencing https://github.com/t6c/sellapp-api-wrapper/blob/main/lib/api.js
 
 class Api:
-    def __init__(self, sellapp_api_key: str) -> None:
+    def __init__(self, sellapp_api_key: str, store: str = "") -> None:
         self.sellapp_api_key = sellapp_api_key
         self.headers = {
             "Authorization": f"Bearer {self.sellapp_api_key}",
+            
             "Accept": "application/json"
         }
+        if store != "":
+            self.headers["X-Store"] = store
         self.check_api_key()
 
     def do_request(self, params: str = "", json: dict = None, method: str = "GET") -> httpx.Response:
@@ -194,25 +197,7 @@ class Api:
 
         :return: All products
         """
-        return self.do_request(params="products").json()
-
-    def get_all_orders_desc(self, field: str) -> dict:
-        """
-        Get all products in descending order
-
-        :param field: field to query in descending order.
-
-        :return: All products in descending order
-        """
-        post_data = {
-			"sort": [
-				{
-					field: field,
-					"direction": "desc", 
-				}
-			]
-		}
-        return self.do_request(params=f"invoices/search", json=post_data).json()
+        return self.do_request(params="listings").json()
 
     def get_product(self, id: str) -> dict:
         """
