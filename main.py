@@ -1,4 +1,4 @@
-from src.sellapp import Api
+from sellapp import Api
 
 api = Api("API KEY")
 
