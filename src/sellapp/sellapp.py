@@ -40,8 +40,11 @@ class Api:
         """
         Check if the API key is valid
         """
-        if self.do_request(params="listings").status_code in [401, 403]:
-            raise ValueError("Invalid API key or IP blocked by Cloudflare")
+        status_code = self.do_request(params="listings").status_code
+        if status_code == 401:
+            raise ValueError("Invalid API key")
+        if status_code == 403:
+            raise ValueError("IP blocked by Cloudflare")
         
 
 
